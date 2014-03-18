@@ -64,10 +64,10 @@ while x > 0:
         findGoldbachs(x)
         print(GoldbachNumbers[x])
 
+# Save any newly generated primes and Goldbach pieces
 for i in primes[numPrimesInFile:]:
         primeFile.write(str(i) + '\n')
 primeFile.close()
-
 for i in sorted(GoldbachNumbers.keys())[numGoldbachsInFile:]:
         GoldbachFile.write(str(i))
         for x in GoldbachNumbers[i][::2]:
