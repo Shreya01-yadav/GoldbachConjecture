@@ -26,9 +26,9 @@ def Goldbach(n):
                         findPrimes(n)
                 GoldbachNumbers[n] = []
                 for i in primes:
-                        if i > n/2:
-                                break
-                        if n - i in primes:
+                        if i > (n/2):
+                              break
+                        if (n - i) in primes:
                                 GoldbachNumbers[n].extend([i, n - i])
 
 # Find the prime possibilities for all numbers up to N
@@ -59,8 +59,7 @@ numGoldbachsInFile = len(GoldbachNumbers.keys())
 # I/O loop
 x = 2
 while x > 0:
-        x = int(input('Enter an even number: '))
-        # x = 10000
+        x = int(input('Enter an even number: ')
         findGoldbachs(x)
         print(GoldbachNumbers[x])
 
